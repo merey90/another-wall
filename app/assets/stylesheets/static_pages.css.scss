@@ -1,0 +1,9 @@
+@import 'variables';
+
+h1{
+    color: $red;
+}
+
+
+@import 'static_pages/home';
+@import 'static_pages/about';
