@@ -2,6 +2,24 @@
 @import "font-awesome";
 @import 'variables';
 
-.container{
+body{
     background-color: $dark-white;
+    .container.main_container{
+        background-color: #fff;
+        min-height: 100%;
+        padding-top: 51px;
+        margin-top: -51px;
+    }
+    footer.footer{
+        height: 50px;
+        border-top: 1px solid $dark-gray;
+    }
+}
+
+form.new_post{
+    margin-top: 20px;
+    border: 1px solid $dark-gray;
+    max-width: 500px;
+    padding: 15px;
+    border-radius: 8px;
 }

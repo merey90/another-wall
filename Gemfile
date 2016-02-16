@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.5'
+gem 'responders', '~> 2.0'
+gem 'angular_rails_csrf'
 gem 'sqlite3'
 gem 'angular-rails-templates'
 gem 'bootstrap-sass',           '~> 3.3.6'
