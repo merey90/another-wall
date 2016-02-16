@@ -1,23 +1,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" /> 
 <!DOCTYPE html>
 <html>
-<head>
-  <%= favicon_link_tag 'favicon.ico' %>
-  <title>Flapper News</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag params[:controller] %>
-  <%= csrf_meta_tags %>
-  <%= render 'layouts/partials/shim' %>
-</head>
-<body class="controller_<%=controller_name%> method_<%= action_name %>">
-  <%= render 'layouts/partials/header'%>
-  <div class="container">
-    <%= yield %>
-  </div>
-  <div class="container">
-    <%= render 'layouts/partials/footer' %>
-  </div>
-</body>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag params[:controller] %>
+  <head>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <title>Another Wall</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/partials/shim' %>
+  </head>
+  <body ng-app="anotherWall">
+    <div class="container">
+      <%= render 'layouts/partials/header'%>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <ui-view></ui-view>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <%= render 'layouts/partials/footer' %>
+    </div>
+    
+  </body>
 </html>

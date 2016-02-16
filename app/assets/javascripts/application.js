@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-// Vendor Files
-//= require angular.min
-//= require angular-ui-router.min
-// require_tree .
+//= require angular
+//= require angular-ui-router
+//= require angular-rails-templates
+//= require_tree .

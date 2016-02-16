@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.5'
 gem 'sqlite3'
+gem 'angular-rails-templates'
 gem 'bootstrap-sass',           '~> 3.3.6'
 gem 'sass-rails',               '5.0.2'
 gem 'font-awesome-sass',        '~> 4.4.0'

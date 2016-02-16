@@ -1,9 +1,14 @@
 @import 'variables';
 
-h1{
-    color: $red;
+div.static_pages{
+    h1{
+        color: $red;
+    }
+    form{
+        margin-top: 20px;
+        border: 1px solid $dark-gray;
+        max-width: 500px;
+        padding: 15px;
+        border-radius: 8px;
+    }
 }
-
-
-@import 'static_pages/home';
-@import 'static_pages/about';
