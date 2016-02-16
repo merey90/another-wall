@@ -18,7 +18,7 @@ angular.module('anotherWall')
         };
         
         $scope.postVote = function(post){
-          post.upvotes += 1;
+          posts.upvote(post);
         };
     }
 ]);
