@@ -1,4 +1,4 @@
-angular.module('anotherWall', ['ui.router', 'templates'])
+angular.module('anotherWall', ['ui.router', 'templates', 'Devise'])
 .config([
     '$stateProvider',
     '$urlRouterProvider',
@@ -27,6 +27,26 @@ angular.module('anotherWall', ['ui.router', 'templates'])
             .state('about', {
               url: '/about',
               templateUrl: 'about/_about.html'
+            })
+            .state('login', {
+              url: '/login',
+              templateUrl: 'auth/_login.html',
+              controller: 'authCtrl',
+              onEnter: ['$state', 'Auth', function($state, Auth) {
+                Auth.currentUser().then(function (){
+                  $state.go('home');
+                })
+              }]
+            })
+            .state('register', {
+              url: '/register',
+              templateUrl: 'auth/_register.html',
+              controller: 'authCtrl',
+              onEnter: ['$state', 'Auth', function($state, Auth) {
+                Auth.currentUser().then(function (){
+                  $state.go('home');
+                })
+              }]
             });
         $urlRouterProvider.otherwise('home');
     }
