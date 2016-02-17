@@ -15,9 +15,18 @@ angular.module('anotherWall', ['ui.router', 'templates'])
                 }
             })
             .state('posts', {
-              url: '/posts/{id}',
+              url: '/posts/{id:int}',
               templateUrl: 'posts/_posts.html',
-              controller: 'PostsCtrl'
+              controller: 'PostsCtrl',
+              resolve: {
+                  post: ['$stateParams', 'posts', function($stateParams, posts){
+                      return posts.get($stateParams.id);
+                  }] 
+              }
+            })
+            .state('about', {
+              url: '/about',
+              templateUrl: 'about/_about.html'
             });
         $urlRouterProvider.otherwise('home');
     }
