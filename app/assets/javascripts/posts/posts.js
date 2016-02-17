@@ -33,7 +33,7 @@ angular.module('anotherWall')
     };
     
     o.upvoteComment= function(post, comment){
-      return $http.put('/posts/'+post.id+'/comments/'+comment.id+'upvote.json').success(function(data) {
+      return $http.put('/posts/'+post.id+'/comments/'+comment.id+'/upvote.json').success(function(data) {
          comment.upvotes +=1; 
       });
     };
