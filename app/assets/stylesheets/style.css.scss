@@ -2,6 +2,36 @@
 @import "font-awesome";
 @import 'variables';
 
+@keyframes slide-in {
+    0% {
+        margin-left: 100%;
+    }
+    50%{
+        margin-left: 0px;
+    }
+    75%{
+        margin-left: 30px;
+    }
+    90%{
+        margin-left: 0px;
+    }
+    95%{
+        margin-left: 10px;
+    }
+    100% {
+        margin-left: 0px;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 body{
     background-color: $dark-white;
     .container.main_container{
@@ -9,6 +39,9 @@ body{
         min-height: 100%;
         padding-top: 120px;
         margin-top: -50px;
+        .post_block{
+            animation: slide-in .4s ease;
+        }
     }
     footer.footer{
         height: 50px;

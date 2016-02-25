@@ -1,4 +1,4 @@
-    <div ng-repeat="post in posts | orderBy:'-upvotes'">
+    <div ng-repeat="post in posts | orderBy:'-upvotes'" class="post_block">
       <i class="fa fa-thumbs-o-up btn btn-xs btn-default" ng-click="postVote(post)"> {{post.upvotes}}</i>
       <span style="font-size:20px; margin-left:10px;">
         <a ng-show="post.link" href="{{post.link}}">
@@ -16,7 +16,7 @@
       </p>
     </div>
 
-    <form ng-submit="addPost()" style="margin-top:30px;" class="new_post">
+    <form ng-show="signedIn()" ng-submit="addPost()" style="margin-top:30px;" class="new_post">
       <h3>Add a new post</h3>
 
       <div class="form-group">

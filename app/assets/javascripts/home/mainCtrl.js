@@ -2,8 +2,10 @@ angular.module('anotherWall')
 .controller('mainCtrl', [
     '$scope',
     'posts',
-    function($scope, posts){
+    'Auth',
+    function($scope, posts, Auth){
         $scope.posts = posts.posts;
+        $scope.signedIn = Auth.isAuthenticated;
         
         $scope.addPost = function(){
             if(!$scope.title || $scope.title === '') return;
